@@ -1,4 +1,4 @@
-package com.littlezheng.tool.filepack;
+package com.littlezheng.tool.filefilter;
 
 import java.io.File;
 import java.util.Collection;

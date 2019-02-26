@@ -1,7 +1,9 @@
-package com.littlezheng.tool.filepack;
+package com.littlezheng.tool.filefilter.rules;
 
 import java.io.File;
 import java.util.Date;
+
+import com.littlezheng.tool.filefilter.FilterRule;
 
 public class TimeBetweenFilterRule implements FilterRule {
 

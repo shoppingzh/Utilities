@@ -1,4 +1,4 @@
-package com.littlezheng.tool.filepack;
+package com.littlezheng.tool.filefilter;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -10,6 +10,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+
+import com.littlezheng.tool.filefilter.rules.ExtensionFilterRule;
+import com.littlezheng.tool.filefilter.rules.TimeBetweenFilterRule;
 
 public class App {
     

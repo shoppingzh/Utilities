@@ -1,8 +1,10 @@
-package com.littlezheng.tool.filepack;
+package com.littlezheng.tool.filefilter.rules;
 
 import java.io.File;
 
 import org.apache.commons.io.FilenameUtils;
+
+import com.littlezheng.tool.filefilter.FilterRule;
 
 public class ExtensionFilterRule implements FilterRule{
     
