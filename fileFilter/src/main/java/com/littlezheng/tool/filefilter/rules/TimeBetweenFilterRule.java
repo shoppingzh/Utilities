@@ -10,6 +10,12 @@ public class TimeBetweenFilterRule implements FilterRule {
     private long start;
     private long end;
 
+    public TimeBetweenFilterRule(long start, long end) {
+        super();
+        this.start = start;
+        this.end = end;
+    }
+
     public TimeBetweenFilterRule(Date startTime, Date endTime) {
         super();
         this.start = startTime.getTime();
