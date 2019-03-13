@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #imgArea{
+            display: inline-block;
+            margin-left: 20px;
+            background-repeat: no-repeat;
+            max-width: 500px;
+        }
+        .btn{
+            background-color: #38c;
+            color: #fff;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    选择一个文件：<input id="file" type="file">
+
+    <button class="btn" onclick="encodeFile();">Base64加密</button>
+
+    <div>
+        <h4>加密结果</h4>
+        <textarea id="result" rows="20" cols="100"></textarea>
+        <img id="imgArea" />
+    </div>
+
+
+
+    <script>
+        function encodeFile(){
+            var file = document.getElementById('file').files[0];
+            if(!file){
+                alert('请选择一个文件');
+                return false;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+
+            reader.onloadend = function(){
+                document.getElementById('result').innerText = this.result;
+                // 如果所选文件是图片，则直接在右侧显示
+                if(/image\/.*$/.test(this.result)){
+                    console.log('展示图片');
+                    document.getElementById('imgArea').src = this.result;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
